@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TabacPageRoutingModule } from './tabac-routing.module';
 
 import { TabacPage } from './tabac.page';
+import {SharedModule} from "../../../modules/shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TabacPageRoutingModule
+    TabacPageRoutingModule,
+    SharedModule
   ],
   declarations: [TabacPage]
 })

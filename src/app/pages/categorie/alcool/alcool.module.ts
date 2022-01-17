@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AlcoolPageRoutingModule } from './alcool-routing.module';
 
 import { AlcoolPage } from './alcool.page';
+import {SharedModule} from "../../../modules/shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AlcoolPageRoutingModule
+    AlcoolPageRoutingModule,
+    SharedModule
   ],
   declarations: [AlcoolPage]
 })

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LivrePageRoutingModule } from './livre-routing.module';
 
 import { LivrePage } from './livre.page';
+import {SharedModule} from "../../../modules/shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LivrePageRoutingModule
+    LivrePageRoutingModule,
+    SharedModule
   ],
   declarations: [LivrePage]
 })
