@@ -12,7 +12,23 @@ const routes: Routes = [
   },
   {
     path: 'profil',
-    loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
+    loadChildren: () => import('./pages/user/profil/profil.module').then( m => m.ProfilPageModule)
+  },
+  {
+    path: 'tabac',
+    loadChildren: () => import('./pages/categorie/tabac/tabac.module').then( m => m.TabacPageModule)
+  },
+  {
+    path: 'livre',
+    loadChildren: () => import('./pages/categorie/livre/livre.module').then( m => m.LivrePageModule)
+  },
+  {
+    path: 'alcool',
+    loadChildren: () => import('./pages/categorie/alcool/alcool.module').then( m => m.AlcoolPageModule)
+  },
+  {
+    path: 'nutrition',
+    loadChildren: () => import('./pages/categorie/nutrition/nutrition.module').then( m => m.NutritionPageModule)
   }
 ];
 @NgModule({

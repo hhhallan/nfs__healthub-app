@@ -13,7 +13,23 @@ const routes: Routes = [
       },
       {
         path: 'profil',
-        loadChildren: () => import('../profil/profil.module').then(m => m.ProfilPageModule)
+        loadChildren: () => import('../user/profil/profil.module').then(m => m.ProfilPageModule)
+      },
+      {
+        path: 'tabac',
+        loadChildren: () => import('../categorie/tabac/tabac.module').then(m => m.TabacPageModule)
+      },
+      {
+        path: 'alcool',
+        loadChildren: () => import('../categorie/alcool/alcool.module').then(m => m.AlcoolPageModule)
+      },
+      {
+        path: 'livre',
+        loadChildren: () => import('../categorie/livre/livre.module').then(m => m.LivrePageModule)
+      },
+      {
+        path: 'nutrition',
+        loadChildren: () => import('../categorie/nutrition/nutrition.module').then(m => m.NutritionPageModule)
       },
       {
         path: '',
