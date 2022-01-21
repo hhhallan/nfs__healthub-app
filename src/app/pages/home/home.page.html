@@ -1,8 +1,91 @@
 <app-header headerPage="Home"></app-header>
 
 <ion-content>
-  <ion-button routerLink="/tabac">Tabac</ion-button>
-  <ion-button routerLink="/alcool">alcool</ion-button>
-  <ion-button routerLink="/nutrition">nutrition</ion-button>
-  <ion-button routerLink="/livre">livre</ion-button>
+
+  <div>
+    <ion-grid class="grid-categorie">
+
+      <div>
+        <h2>Catégories</h2>
+        <ion-button fill="outline" size="small" color="dark">Add</ion-button>
+      </div>
+
+      <ion-row>
+        <ion-col>
+          <ion-button class="categorie-general" color="light" routerLink="/tabac">Tabac</ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button class="categorie-general" color="light" routerLink="/alcool">alcool</ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button class="categorie-general" color="light" routerLink="/nutrition">nutrition</ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button class="categorie-general" color="light" routerLink="/livre">livre</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Exclu du mois</h3>
+
+      <ion-row>
+        <ion-button class="exclu-card" color="light">NNN</ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Achivements</h3>
+
+      <ion-row>
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+
+        <ion-col>
+          <div class="achivement-card"></div>
+        </ion-col>
+      </ion-row>
+
+      <div class="achivement-show">
+        <ion-button fill="outline" color="dark" size="small">Show all</ion-button>
+      </div>
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Groupe de parole</h3>
+      <ion-row>
+        <ion-button class="group-card" color="medium" disabled="true">Rejoindre un groupe</ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>
