@@ -1,4 +1,4 @@
-<app-header headerPage="Home"></app-header>
+<app-header></app-header>
 
 <ion-content>
 
@@ -7,24 +7,12 @@
 
       <div>
         <h2>Catégories</h2>
-        <ion-button fill="outline" size="small" color="dark">Add</ion-button>
+        <ion-button fill="outline" size="small" color="dark" routerLink="/add">Add</ion-button>
       </div>
 
       <ion-row>
-        <ion-col>
-          <ion-button class="categorie-general" color="light" routerLink="/tabac">Tabac</ion-button>
-        </ion-col>
-
-        <ion-col>
-          <ion-button class="categorie-general" color="light" routerLink="/alcool">alcool</ion-button>
-        </ion-col>
-
-        <ion-col>
-          <ion-button class="categorie-general" color="light" routerLink="/nutrition">nutrition</ion-button>
-        </ion-col>
-
-        <ion-col>
-          <ion-button class="categorie-general" color="light" routerLink="/livre">livre</ion-button>
+        <ion-col *ngFor="let cat of categories">
+          <ion-button *ngIf="!cat.exclu" class="categorie-general" color="light" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-button>
         </ion-col>
       </ion-row>
 
@@ -35,8 +23,8 @@
     <ion-grid>
       <h3>Exclu du mois</h3>
 
-      <ion-row>
-        <ion-button class="exclu-card" color="light">NNN</ion-button>
+      <ion-row *ngFor="let cat of categories">
+        <ion-button *ngIf="cat.exclu" class="exclu-card" color="light" [routerLink]="['/detail', cat.id]">{{cat.name}}</ion-button>
       </ion-row>
     </ion-grid>
   </div>
@@ -45,31 +33,9 @@
     <ion-grid>
       <h3>Achivements</h3>
 
-      <ion-row>
-        <ion-col>
-          <div class="achivement-card"></div>
-        </ion-col>
-
-        <ion-col>
-          <div class="achivement-card"></div>
-        </ion-col>
-
-        <ion-col>
-          <div class="achivement-card"></div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col>
-          <div class="achivement-card"></div>
-        </ion-col>
-
-        <ion-col>
-          <div class="achivement-card"></div>
-        </ion-col>
-
-        <ion-col>
-          <div class="achivement-card"></div>
+      <ion-row class="achivement-container">
+        <ion-col *ngFor="let ach of achivements">
+          <div class="achivement-card">{{ach.id}}</div>
         </ion-col>
       </ion-row>
 

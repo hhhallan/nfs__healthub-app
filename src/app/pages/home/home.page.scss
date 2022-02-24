@@ -46,7 +46,7 @@ ion-grid {
 
   }
 
-  // Grid Cat. exclu + achivements
+  // Grid Cat. exclu
   ion-row {
     display: flex;
     flex-wrap: nowrap;
@@ -76,6 +76,26 @@ ion-grid {
         width: 100%;
       }
     }
+
+    // Achivement
+    &.achivement-container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      //overflow: hidden;
+
+      ion-col {
+        padding: 0;
+        width: 100px;
+        height: 100px;
+
+        .achivement-card {
+          width: 100px;
+          height: 100px;
+          border: 1px solid red;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 }
 
@@ -85,9 +105,4 @@ ion-grid {
   align-items: center;
 }
 
-.achivement-card {
-  width: 100px;
-  height: 100px;
-  border: 1px solid red;
-  border-radius: 5px;
-}
+
