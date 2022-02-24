@@ -3,8 +3,8 @@
 <!--  SIDE MENU  -->
   <ion-menu menuId="main-menu" content-id="main">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Healthub</ion-title>
+      <ion-toolbar class="ion-text-center">
+        <ion-img src="../assets/img/healthub-logo.svg"></ion-img>
       </ion-toolbar>
     </ion-header>
 
@@ -21,6 +21,20 @@
           <ion-item routerLink="/profil">
             <ion-icon name="person-outline"></ion-icon>
             <ion-label>Profil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle slot="bottom">
+          <ion-item routerLink="/login">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <ion-label>Login</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle slot="bottom">
+          <ion-item routerLink="/registration">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <ion-label>Register</ion-label>
           </ion-item>
         </ion-menu-toggle>
 

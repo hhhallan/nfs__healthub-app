@@ -11,21 +11,21 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user/profil/profil.module').then( m => m.ProfilPageModule)
   },
   {
-    path: 'tabac',
-    loadChildren: () => import('./pages/categorie/tabac/tabac.module').then( m => m.TabacPageModule)
+    path: 'detail/:id',
+    loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailPageModule)
   },
   {
-    path: 'livre',
-    loadChildren: () => import('./pages/categorie/livre/livre.module').then( m => m.LivrePageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/user/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'alcool',
-    loadChildren: () => import('./pages/categorie/alcool/alcool.module').then( m => m.AlcoolPageModule)
+    path: 'registration',
+    loadChildren: () => import('./pages/user/registration/registration.module').then( m => m.RegistrationPageModule)
   },
   {
-    path: 'nutrition',
-    loadChildren: () => import('./pages/categorie/nutrition/nutrition.module').then( m => m.NutritionPageModule)
-  }
+    path: 'add',
+    loadChildren: () => import('./pages/categorie/add/add.module').then( m => m.AddPageModule)
+  },
 ];
 @NgModule({
   imports: [
