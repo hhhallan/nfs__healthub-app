@@ -1,0 +1,64 @@
+{
+  "categorie": [
+    {
+      "id": 1,
+      "name": "Tabac",
+      "exclu": false,
+      "usercat": true
+    },
+    {
+      "id": 2,
+      "name": "Alcool",
+      "exclu": false,
+      "usercat": true
+    },
+    {
+      "id": 3,
+      "name": "Santé",
+      "exclu": false,
+      "usercat": true
+    },
+    {
+      "id": 4,
+      "name": "Lecture",
+      "exclu": false,
+      "usercat": false
+    },
+    {
+      "id": 5,
+      "name": "Exclu",
+      "exclu": true,
+      "usercat": false
+    }
+  ],
+  "achivement": [
+    {
+      "id": 1,
+      "name": "Achivement 1",
+      "description": "La description de l'achivement.",
+      "user_get": true
+    },
+    {
+      "id": 2,
+      "name": "Achivement 2",
+      "description": "La description de l'achivement.",
+      "user_get": false
+    },
+    {
+      "id": 3,
+      "name": "Achivement 3",
+      "description": "La description de l'achivement.",
+      "user_get": false
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "pseudo": "Pseudotest",
+      "mail": "test@test.com",
+      "password": "azerty",
+      "age": 20,
+      "gender": true
+    }
+  ]
+}
