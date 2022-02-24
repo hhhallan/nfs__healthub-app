@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import {CategorieService} from "../../services/categorie/categorie.service";
-import {AchivementService} from "../../services/achivement/achivement.service";
+import { Component, OnInit } from '@angular/core';
+import {CategorieService} from "../../../services/categorie/categorie.service";
+import {AchivementService} from "../../../services/achivement/achivement.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-add',
+  templateUrl: './add.page.html',
+  styleUrls: ['./add.page.scss'],
 })
-export class HomePage {
+export class AddPage {
   categories: Array<any>;
   achivements: Array<any>;
   loading = true;

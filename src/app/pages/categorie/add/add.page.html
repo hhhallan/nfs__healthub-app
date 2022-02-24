@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Catégories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Mes catégories</ion-title>
+
+  <div *ngFor="let cat of categories">
+    <div *ngIf="cat.usercat">
+      {{cat.name}}
+    </div>
+  </div>
+
+  <ion-title>Toutes les cat</ion-title>
+
+  <div *ngFor="let cat of categories">
+    <div *ngIf="!cat.usercat">
+      {{cat.name}}
+    </div>
+  </div>
+
+  <hr>
+</ion-content>

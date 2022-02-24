@@ -1,9 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content>
+
+  <div>
+    <ion-grid class="grid-categorie">
+
+      <div>
+        <h2>Catégories</h2>
+        <ion-button fill="outline" size="small" color="dark" routerLink="/add">Add</ion-button>
+      </div>
+
+      <ion-row>
+        <ion-col *ngFor="let cat of categories">
+          <ion-button *ngIf="!cat.exclu" class="categorie-general" color="light" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Exclu du mois</h3>
+
+      <ion-row *ngFor="let cat of categories">
+        <ion-button *ngIf="cat.exclu" class="exclu-card" color="light" [routerLink]="['/detail', cat.id]">{{cat.name}}</ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Achivements</h3>
+
+      <ion-row class="achivement-container">
+        <ion-col *ngFor="let ach of achivements">
+          <div class="achivement-card">{{ach.id}}</div>
+        </ion-col>
+      </ion-row>
+
+      <div class="achivement-show">
+        <ion-button fill="outline" color="dark" size="small">Show all</ion-button>
+      </div>
+    </ion-grid>
+  </div>
+
+  <div>
+    <ion-grid>
+      <h3>Groupe de parole</h3>
+      <ion-row>
+        <ion-button class="group-card" color="medium" disabled="true">Rejoindre un groupe</ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
