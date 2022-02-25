@@ -25,7 +25,11 @@ const routes: Routes = [
   {
     path: 'add',
     loadChildren: () => import('./pages/categorie/add/add.module').then( m => m.AddPageModule)
+  },  {
+    path: 'notifications',
+    loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
+
 ];
 @NgModule({
   imports: [

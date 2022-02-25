@@ -1,3 +1,5 @@
+import { NotificationComponent } from './../../components/notification/notification.component';
+import { IonicModule } from '@ionic/angular';
 import { LoaderComponent } from './../../components/loader/loader.component';
 import { ErrorComponent } from './../../components/error/error.component';
 import { HomeheaderComponent } from './../../components/homeheader/homeheader.component';
@@ -9,13 +11,15 @@ const directives: Array<any> = [
   HeaderComponent,
   HomeheaderComponent,
   ErrorComponent,
-  LoaderComponent
+  LoaderComponent,
+  NotificationComponent
 ];
 
 @NgModule({
   declarations: directives,
   imports: [
-    CommonModule
+    CommonModule,
+    IonicModule
   ],
   exports: directives
 })

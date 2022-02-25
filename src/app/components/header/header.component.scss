@@ -1,3 +1,17 @@
-ion-img {
-  width: 50%;
+ion-header{
+  background-color: white;
+  box-shadow: none;
+}
+ion-toolbar{
+  height: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+    
+}
+.header-md::after {
+  height: 0;
+}
+ion-title{
+  font-weight: bold;
+  font-size: 36px;
 }
