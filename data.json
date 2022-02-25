@@ -3,31 +3,32 @@
     {
       "id": 1,
       "name": "Tabac",
-      "exclu": false,
+      "image": "",
+      "unable": false,
       "usercat": true
     },
     {
       "id": 2,
       "name": "Alcool",
-      "exclu": false,
+      "unable": false,
       "usercat": true
     },
     {
       "id": 3,
       "name": "Santé",
-      "exclu": false,
+      "unable": false,
       "usercat": true
     },
     {
       "id": 4,
       "name": "Lecture",
-      "exclu": false,
+      "unable": false,
       "usercat": false
     },
     {
       "id": 5,
-      "name": "Exclu",
-      "exclu": true,
+      "name": "NNN",
+      "unable": true,
       "usercat": false
     }
   ],
