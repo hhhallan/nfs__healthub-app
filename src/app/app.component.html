@@ -1,10 +1,9 @@
 <ion-app>
-
-<!--  SIDE MENU  -->
+  <!--  SIDE MENU  -->
   <ion-menu menuId="main-menu" content-id="main">
     <ion-header>
       <ion-toolbar class="ion-text-center">
-        <ion-img src="../assets/img/healthub-logo.svg"></ion-img>
+        <ion-img [src]="logo" alt="logo de HealtHub"></ion-img>
       </ion-toolbar>
     </ion-header>
 
@@ -17,7 +16,7 @@
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-menu-toggle>
+        <ion-menu-toggle slot="bottom">
           <ion-item routerLink="/profil">
             <ion-icon name="person-outline"></ion-icon>
             <ion-label>Profil</ion-label>
@@ -25,28 +24,42 @@
         </ion-menu-toggle>
 
         <ion-menu-toggle slot="bottom">
-          <ion-item routerLink="/login">
-            <ion-icon name="log-out-outline"></ion-icon>
-            <ion-label>Login</ion-label>
+          <ion-item routerLink="/add">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label>Catégories</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle slot="bottom">
-          <ion-item routerLink="/registration">
-            <ion-icon name="log-out-outline"></ion-icon>
-            <ion-label>Register</ion-label>
+          <ion-item routerLink="/">
+            <ion-icon name="trophy-outline"></ion-icon>
+            <ion-label>Achievements</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle slot="bottom">
+          <ion-item routerLink="/">
+            <ion-icon name="watch-outline"></ion-icon>
+            <ion-label>Appareils</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle slot="bottom">
+          <ion-item routerLink="/login">
+            <ion-icon name="log-in-outline"></ion-icon>
+            <ion-label>Connexion</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle slot="bottom">
           <ion-item routerLink="/">
             <ion-icon name="log-out-outline"></ion-icon>
-            <ion-label>Se déconnecter</ion-label>
+            <ion-label>Deconnexion</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
-
+  
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
