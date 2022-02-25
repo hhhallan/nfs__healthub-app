@@ -1,25 +1,36 @@
 <ion-header>
+  <ion-buttons>
+    <ion-back-button slot="start"></ion-back-button>
+  </ion-buttons>
   <ion-toolbar>
     <ion-title>Catégories</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-title>Mes catégories</ion-title>
+  <ion-title class="secondary-title">Mes catégories</ion-title>
 
-  <div *ngFor="let cat of categories">
-    <div *ngIf="cat.usercat">
-      {{cat.name}}
+  <div class="categorie-container">
+    <div *ngFor="let cat of categories">
+      <ion-card *ngIf="cat.usercat" [routerLink]="['/detail', cat.id]">
+        <ion-title>
+          {{cat.name}}
+        </ion-title>
+      </ion-card>
     </div>
   </div>
 
-  <ion-title>Toutes les cat</ion-title>
+  <ion-item-divider></ion-item-divider>
 
-  <div *ngFor="let cat of categories">
-    <div *ngIf="!cat.usercat">
-      {{cat.name}}
+  <ion-title class="secondary-title">Toutes les catégories</ion-title>
+
+  <div class="categorie-container">
+    <div *ngFor="let cat of categories">
+      <ion-card *ngIf="!cat.usercat" [routerLink]="['/detail', cat.id]">
+        <ion-title>
+          {{cat.name}}
+        </ion-title>
+      </ion-card>
     </div>
   </div>
-
-  <hr>
 </ion-content>

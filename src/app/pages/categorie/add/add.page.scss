@@ -1,0 +1,25 @@
+ion-card {
+  width: 150px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ion-title {
+    text-align: center;
+  }
+}
+
+.categorie-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.secondary-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  color: #555555;
+}
