@@ -30,10 +30,6 @@ ion-grid {
       justify-content: space-between;
       align-items: center;
       padding-right: 10px;
-
-      ion-button {
-        //font-size: 12px;
-      }
     }
 
     ion-row ion-col {
@@ -58,13 +54,14 @@ ion-grid {
     }
 
     // card catégorie
-    ion-button {
+    ion-card {
       width: 180px;
       height: 120px;
       border-radius: 10px;
+      text-align: center;
 
       // card exclu
-      &.exclu-card {
+      &.categorie-card {
         width: 100%;
       }
 

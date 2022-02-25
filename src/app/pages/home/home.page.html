@@ -10,10 +10,10 @@
         <ion-button fill="outline" size="small" color="dark" routerLink="/add">Add</ion-button>
       </div>
 
-      <ion-row>
-        <ion-col *ngFor="let cat of categories">
-          <ion-button *ngIf="!cat.exclu" class="categorie-general" color="light" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-button>
-        </ion-col>
+      <ion-row *ngFor="let cat of categories">
+<!--        <ion-col *ngFor="let cat of categories">-->
+          <ion-card *ngIf="!cat.unable" class="categorie-card" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-card>
+<!--        </ion-col>-->
       </ion-row>
 
     </ion-grid>
@@ -24,7 +24,7 @@
       <h3>Exclu du mois</h3>
 
       <ion-row *ngFor="let cat of categories">
-        <ion-button *ngIf="cat.exclu" class="exclu-card" color="light" [routerLink]="['/detail', cat.id]">{{cat.name}}</ion-button>
+        <ion-card *ngIf="cat.unable" class="categorie-card" [routerLink]="['/detail', cat.id]">{{cat.name}}</ion-card>
       </ion-row>
     </ion-grid>
   </div>
