@@ -11,9 +11,7 @@
       </div>
 
       <ion-row *ngFor="let cat of categories">
-<!--        <ion-col *ngFor="let cat of categories">-->
-          <ion-card *ngIf="!cat.unable" class="categorie-card" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-card>
-<!--        </ion-col>-->
+        <ion-card *ngIf="!cat.unable && cat.usercat" class="categorie-card" [routerLink]="['/detail', cat.id]">{{ cat.name }}</ion-card>
       </ion-row>
 
     </ion-grid>
