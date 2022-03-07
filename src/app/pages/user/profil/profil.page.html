@@ -3,29 +3,28 @@
 <ion-content>
   <ion-card>
     <ion-card-content>
-      <ion-buttons>
-        <ion-button fill="clear">
-          <ion-icon name="medal-outline"></ion-icon>
-          <ion-title>Mes achivements</ion-title>
-          <p>></p>
-        </ion-button>
+
+      <ion-buttons [routerLink]="['/achievements']">
+          <app-more
+            title="Mes achievements"
+            icon="medal-outline"
+          ></app-more>
       </ion-buttons>
 
       <ion-buttons>
-        <ion-button fill="clear">
-          <ion-icon name="server-outline"></ion-icon>
-          <ion-title>Mes données</ion-title>
-          <p>></p>
-        </ion-button>
+        <app-more
+          title="Mes données"
+          icon="server-outline"
+        ></app-more>
       </ion-buttons>
 
-      <ion-buttons>
-        <ion-button fill="clear">
-          <ion-icon name="menu-outline"></ion-icon>
-          <ion-title>Mes catégories</ion-title>
-          <p>></p>
-        </ion-button>
+      <ion-buttons [routerLink]="['/add']">
+        <app-more
+          title="Mes catégories"
+          icon="menu-outline"
+        ></app-more>
       </ion-buttons>
+
     </ion-card-content>
   </ion-card>
 

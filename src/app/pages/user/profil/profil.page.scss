@@ -3,12 +3,14 @@ ion-card {
   margin: 20px 10px;
 }
 
-ion-button {
+ion-buttons {
   width: 100%;
+  padding: 0;
+  margin: 0;
 
-  ion-title {
-    text-align: left;
-  }
+}
+app-more{
+  width: 100%;
 }
 
 .profil-info {

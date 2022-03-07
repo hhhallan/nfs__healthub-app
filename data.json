@@ -55,6 +55,7 @@
   "user": [
     {
       "id": 1,
+      "avatar" : "",
       "pseudo": "Pseudotest",
       "mail": "test@test.com",
       "password": "azerty",

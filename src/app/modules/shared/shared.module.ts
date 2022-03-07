@@ -1,3 +1,5 @@
+import { MoreComponent } from './../../components/more/more.component';
+import { HealthComponent } from './../../components/health/health.component';
 import { NotificationComponent } from './../../components/notification/notification.component';
 import { IonicModule } from '@ionic/angular';
 import { LoaderComponent } from './../../components/loader/loader.component';
@@ -12,7 +14,9 @@ const directives: Array<any> = [
   HomeheaderComponent,
   ErrorComponent,
   LoaderComponent,
-  NotificationComponent
+  NotificationComponent,
+  HealthComponent,
+  MoreComponent
 ];
 
 @NgModule({
