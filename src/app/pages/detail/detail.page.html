@@ -2,18 +2,73 @@
   <ion-buttons>
     <ion-back-button></ion-back-button>
   </ion-buttons>
+  <ion-title>test</ion-title>
 </ion-header>
 
 <ion-content>
 
-  <div class="categorie">
+  <div class="categorie-added">
     <div class="header" *ngIf="categorie">
 
 
       <h1>{{categorie.name}}</h1>
+
+      <ion-card class="card-user-stat">
+        STATISTIQUES
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <ion-title>Rapport journalier :</ion-title>
+
+          <ion-buttons>
+            <ion-button fill="clear">
+              <ion-title>Activité</ion-title>
+              <p>></p>
+            </ion-button>
+          </ion-buttons>
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content>
+          <ion-title>Objectifs :</ion-title>
+
+          <ion-buttons>
+            <ion-button fill="clear">
+              <ion-title>Activité</ion-title>
+              <p>></p>
+            </ion-button>
+          </ion-buttons>
+
+        </ion-card-content>
+      </ion-card>
+
     </div>
 
     <div class="content"></div>
   </div>
+
+  <!--  <ng-template #notAdded>-->
+  <!--    Mettre la possibilité d'ajouter la page   -->
+  <!--  </ng-template>-->
+
+  <section class="categorie-not-added">
+
+    <img src="" alt="">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque, ducimus ea nostrum officia voluptatibus.</p>
+
+    <div class="detail-footer">
+      <div class="categorie-stats">
+        <ion-icon name="person-outline"></ion-icon>
+        <p>123 <br> membres actifs</p>
+      </div>
+
+      <ion-button>Ajouter</ion-button>
+    </div>
+
+  </section>
 
 </ion-content>

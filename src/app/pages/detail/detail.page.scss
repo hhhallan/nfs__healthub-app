@@ -1,0 +1,36 @@
+.categorie-added {
+  ion-card ion-card-content {
+    ion-button {
+      width: 100%;
+
+      ion-title {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.categorie-not-added {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+
+  .detail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .categorie-stats {
+      display: flex;
+      align-items: center;
+
+      ion-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
