@@ -55,12 +55,23 @@
   "user": [
     {
       "id": 1,
-      "avatar" : "",
+      "fist_name": "",
+      "last_name": "",
+      "avatar": "",
       "pseudo": "Pseudotest",
       "mail": "test@test.com",
       "password": "azerty",
       "age": 20,
       "gender": true
+    },
+    {
+      "first_name": "Lucas",
+      "last_name": "Barq",
+      "mail": "lucasbarq@free.fr",
+      "pseudo": "Qrab",
+      "age": 21,
+      "password": "#Jsnle27s",
+      "id": 2
     }
   ]
 }
