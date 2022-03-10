@@ -1,0 +1,72 @@
+<section *ngIf="!check"  class="categorie-not-added">
+  <ion-img src="../../asset/img/stoptabac.png"></ion-img>
+  <p>
+    Suivez votre cossomation, fixez vous des objectifs, obtenez des récompenses et progressez a votre rythme. 
+    Retrouvez nos conseils pour arrêter de fumer, discutez avec d’autres membres, partagez vos progrès et trouver des professionels pour vous aider. 
+    Avec HealthHub faite le premier pas vers une vie sans tabac.
+  </p>
+  <div class="detail-footer">
+      <div class="categorie-stats">
+        <ion-icon name="person-outline"></ion-icon>
+        <p>{{ users }} <br> membres actifs</p>
+      </div>
+
+      <ion-button shape="round" (click)="onClick()" >Ajouter</ion-button>
+    </div>
+</section>
+<section *ngIf="check" class="categorie-added" >
+  <!-- 
+  <ion-card>
+    <ion-card-header>
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+    </ion-card-content>
+  </ion-card>
+  -->
+  <ion-card>
+      <ion-card-header>
+        <h3>Récapitulatif de consommation de la semaine :</h3>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Lundi : {{ conso1 }} cigarettes fumées</p>
+        <p>Mardi : {{ conso2 }} cigarettes fumées</p>
+        <p>Mercredi : {{ conso3 }} cigarettes fumées</p>
+        <p>Jeudi : {{ conso4}} cigarettes fumées</p>
+        <p>Vendredi : {{ conso5 }} cigarettes fumées</p>
+        <p>Samedi : {{ conso6 }} cigarettes fumées</p>
+        <p>Dimanche : {{ conso7 }} cigarettes fumées</p>
+        <br>
+        <ion-button shape="round">
+          voir le récapitulatif complet <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <h3>Votre objectif :</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Votre objectif actuel est de {{ objectif }} cigarettes par jours</p>
+      <p>C'est un bel objectif, n'oubliez pas : fixer des objectifs ateignable aide a progresser </p>
+      <br>
+      <h3>Réglage de l'objectif : </h3>
+      <br>
+      <form>
+        <ion-buttons>
+          <ion-button slot="start icon-only" (click)="more()" class="button">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-button>
+          <ion-text id="text">{{ objectif }}</ion-text>
+          <ion-button slot="end icon-only" (click)="less()" class="button">
+            <ion-icon name="remove-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <br>
+        <ion-button  shape="round" type="submit">Valider le nouvel objectif</ion-button>
+      </form>
+      
+    </ion-card-content>
+  </ion-card>
+</section>

@@ -1,3 +1,4 @@
+import { TabacComponent } from './../../components/tabac/tabac.component';
 import { MoreComponent } from './../../components/more/more.component';
 import { HealthComponent } from './../../components/health/health.component';
 import { NotificationComponent } from './../../components/notification/notification.component';
@@ -16,7 +17,8 @@ const directives: Array<any> = [
   LoaderComponent,
   NotificationComponent,
   HealthComponent,
-  MoreComponent
+  MoreComponent,
+  TabacComponent
 ];
 
 @NgModule({
