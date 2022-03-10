@@ -1,28 +1,36 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Log In</ion-title>
+    <ion-img slot="start" src="../../../assets/img/healthub-logo.svg" alt=""></ion-img>
+    <ion-title slot="">Log In</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
-        <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-        <a [routerLink]="['/registration']">S'inscrire</a>
-      </ion-col>
-    </ion-row>
+  <form [formGroup]="form">
+    <div class="padding">
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+        <app-error
+          *ngIf="form.get('email').touched && form.get('email').errors?.required"
+          message="email requis"
+        ></app-error>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+        <app-error
+          *ngIf="form.get('password').touched && form.get('password').errors?.required"
+          message="mot de passe requis"
+        ></app-error>
+      </ion-item>
+      <ion-item lines="none">
+            <ion-button [routerLink]="['/forgotpassword']" fill="clear" slot="end">Forgot password?</ion-button>
+      </ion-item>
+    </div>  
+    <ion-button shape="round" type="submit" color="danger" [disabled]="!form.valid" expand="block">Sign In</ion-button>
+    <ion-button shape="round" [routerLink]="['/registration']" type="submit" color="danger" expand="block">Sign up</ion-button>
   </form>
 </ion-content>
+

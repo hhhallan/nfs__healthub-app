@@ -18,7 +18,13 @@ export class UserService {
   getId(id: number) {
     return this.http.get<any>(this.url + id);
   }
+  getUserByEmail(email: String, headers) {
+    return this.http.post(this.url + 'api/user/informations', {email}, headers);
+
+  }
+
   add(user: User){
     return this.http.post(this.url, user);
   }
+  
 }
