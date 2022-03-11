@@ -23,6 +23,8 @@ export class TabacComponent implements AfterViewInit {
   @Input() conso6 : number = 3;
   @Input() conso7 : number = 1;
   @Input() objectif : number = 2;
+  @Input() avatar : string = "";
+  @Input() description : string = "";
   
   // récupération du conteneur de graphique //
   //@ViewChild('barCanvas') private barCanvas: ElementRef;

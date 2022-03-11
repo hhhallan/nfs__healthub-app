@@ -11,7 +11,10 @@
     ></app-health>
     <app-tabac
       *ngIf="categorie.name == 'Tabac'"
+      avatar= categorie.img
+      description= categorie.description
       [check]= categorie.unable
+      [objectif]= categorie.objectiveValue
     ></app-tabac>
   </div>
   
