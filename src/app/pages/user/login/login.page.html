@@ -16,6 +16,10 @@
           *ngIf="form.get('email').touched && form.get('email').errors?.required"
           message="email requis"
         ></app-error>
+        <app-error
+          *ngIf="form.get('email').touched && form.get('email').errors?.email"
+          message="email valid requis"
+        ></app-error>
       </ion-item>
       <ion-item lines="full">
         <ion-label position="floating">Password</ion-label>
