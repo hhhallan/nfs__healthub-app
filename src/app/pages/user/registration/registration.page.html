@@ -10,65 +10,86 @@
 
 <ion-content>
 
-  <form #userForm="ngForm" (ngSubmit)="save()">
+  <form #userForm="ngForm" [formGroup]="form" (ngSubmit)="save()">
     <div class="padding">
       <ion-item lines="full">
         <ion-label position="floating">First name</ion-label>
-        <ion-input [(ngModel)]="user.first_name" name="fname" type="text" required minlength="3" maxlength="20" #fname="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.first_name" formControlName="firstname" name="fname" type="text"></ion-input>
       </ion-item>
       <app-error 
-        *ngIf="!fname.valid && fname.touched"
-        message="vous devez saisir un nom faisant entre 3 et 20 charactères"
+        *ngIf="form.get('firstname').touched && form.get('firstname').errors?.required"
+        message="vous devez saisir un nom faisant entre 2 et 20 charactères"
+      ></app-error>
+      <app-error 
+        *ngIf="form.get('firstname').touched && form.get('firstname').errors?.minlength"
+        message="vous devez saisir un nom faisant entre 2 et 20 charactères"
       ></app-error>
   
       <ion-item lines="full">
         <ion-label position="floating">Last name</ion-label>
-        <ion-input [(ngModel)]="user.last_name" name="lname" type="text" required minlength="3" maxlength="20" #lname="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.last_name" name="lname" type="text" formControlName="lastname" ></ion-input>
       </ion-item>
-      <app-error
-        *ngIf="!lname.valid && lname.touched"
-        message="vous devez saisir un nom faisant entre 3 et 20 charactères"
+      <app-error 
+        *ngIf="form.get('lastname').touched && form.get('lastname').errors?.required"
+        message="vous devez saisir un prenom faisant entre 2 et 20 charactères"
+      ></app-error>
+      <app-error 
+        *ngIf="form.get('lastname').touched && form.get('lastname').errors?.minlength"
+        message="vous devez saisir un prenom faisant entre 2 et 20 charactères"
       ></app-error>
   
       <ion-item lines="full">
         <ion-label position="floating">Email</ion-label>
-        <ion-input [(ngModel)]="user.mail" name="mail" type="text" required maxlength="160" #mail="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.mail" name="mail" type="text" formControlName="email"></ion-input>
       </ion-item>
-      <app-error
-        *ngIf="!mail.valid && mail.touched"
-        message="vous devez saisir un email de max 160 charactères"
+      <app-error 
+        *ngIf="form.get('email').touched && form.get('email').errors?.email"
+        message="vous devez saisir un email valid"
       ></app-error>
   
       <ion-item lines="full">
         <ion-label position="floating">Pseudo</ion-label>
-        <ion-input [(ngModel)]="user.pseudo" name="pseudo" type="text" required  minlength="3" maxlength="20" #pseudo="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.pseudo" name="pseudo" type="text" formControlName="pseudo"></ion-input>
       </ion-item>
-      <app-error
-        *ngIf="!pseudo.valid && pseudo.touched"
-        message="vous devez saisir un pseudo faisant entre 3 et 20 charactères"
+      <app-error 
+        *ngIf="form.get('pseudo').touched && form.get('pseudo').errors?.required"
+        message="vous devez saisir un nom faisant entre 2 et 20 charactères"
       ></app-error>
+      <app-error 
+        *ngIf="form.get('pseudo').touched && form.get('pseudo').errors?.minlength"
+        message="vous devez saisir un pseudo faisant entre 2 et 20 charactères"
+      ></app-error>
+  
   
       <ion-item lines="full">
         <ion-label position="floating">Age</ion-label>
-        <ion-input [(ngModel)]="user.age" name="age" type="number" required min="16" #age="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.age" name="age" type="number" formControlName="age"></ion-input>
       </ion-item>
-      <app-error
-        *ngIf="!age.valid && age.touched"
-        message="vous devez avoir 16ans pour utiliser l'application"
+      <app-error 
+        *ngIf="form.get('age').touched && form.get('age').errors?.required"
+        message="vous devez saisir un age"
+      ></app-error>
+      <app-error 
+        *ngIf="form.get('age').touched && form.get('age').errors?.min"
+        message="vous devez avoir minimum 16 ans"
       ></app-error>
   
       <ion-item lines="full">
         <ion-label position="floating">Password</ion-label>
-        <ion-input [(ngModel)]="user.password" name="password" type="password" required  minlength="8" maxlength="20" #password="ngModel"></ion-input>
+        <ion-input [(ngModel)]="user.password" name="password" type="password" formControlName="password"></ion-input>
       </ion-item>
-      <app-error
-        *ngIf="!password.valid && password.touched"
-        message="vous devez saisir un mot de passe faisant entre 8 et 20 charactères"
+      <app-error 
+        *ngIf="form.get('password').touched && form.get('password').errors?.required"
+        message="vous devez saisir un mot de passe"
+      ></app-error>
+      <app-error 
+        *ngIf="form.get('password').touched && form.get('password').errors?.pattern"
+        message="vous devez saisir un mot de passe d'au moins 8 caractères avec une Majuscule, une minuscule, un chiffre et un caractère spécial"
       ></app-error>
     </div>
     
   
-    <ion-button shape="round" type="submit" color="danger" [disabled]="!userForm.form.valid" expand="block">Sign Up</ion-button>
+    <ion-button shape="round" type="submit" color="danger" [disabled]="!form.valid" expand="block">Sign Up</ion-button>
 
   </form>
 </ion-content>

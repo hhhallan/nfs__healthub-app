@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
   createform(): FormGroup{
     return this.formbuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password : ['', Validators.required, ]
+      password : ['', [Validators.required, ]],
     });
   }
 
