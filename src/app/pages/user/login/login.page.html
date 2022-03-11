@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="form">
+  <form [formGroup]="form" >
     <div class="padding">
       <ion-item lines="full">
         <ion-label position="floating">Email</ion-label>
@@ -29,7 +29,7 @@
             <ion-button [routerLink]="['/forgotpassword']" fill="clear" slot="end">Forgot password?</ion-button>
       </ion-item>
     </div>  
-    <ion-button shape="round" type="submit" color="danger" [disabled]="!form.valid" expand="block">Sign In</ion-button>
+    <ion-button shape="round" (click)="onSubmit()" type="submit" color="danger" [disabled]="!form.valid" expand="block">Sign In</ion-button>
     <ion-button shape="round" [routerLink]="['/registration']" type="submit" color="danger" expand="block">Sign up</ion-button>
   </form>
 </ion-content>

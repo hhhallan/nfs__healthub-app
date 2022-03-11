@@ -1,6 +1,6 @@
 import { UserService } from './../../../services/user/user.service';
 import { ToastController } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -16,15 +16,17 @@ export class LoginPage implements OnInit {
   form : FormGroup;
 
   constructor(
+    private router: Router,
     formbuilder : FormBuilder,
-    private router : RouterModule,
     private toastCtrl : ToastController,
     private userService: UserService
   ) 
   {
     this.formbuilder = formbuilder;
   }
-
+  onSubmit(){
+    this.router.navigate(['/home']);
+  }
   createform(): FormGroup{
     return this.formbuilder.group({
       email: ['', Validators.required, ],
