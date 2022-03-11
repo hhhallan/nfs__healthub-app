@@ -18,14 +18,15 @@ export class HomePage {
 
   load() {
     this.categorieService.getAll().subscribe(data => {
-      this.categories = data;
+      this.categories = data['hydra:member'];
+      console.log(data['hydra:member']);
       this.loading = false;
     }, () => {
       this.loading = false;
     });
 
     this.achivementService.getAll().subscribe(data => {
-      this.achivements = data;
+      this.achivements = data['hydra:member'];
       this.loading = false;
     }, () => {
       this.loading = false;
