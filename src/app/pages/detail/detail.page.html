@@ -12,6 +12,8 @@
     <app-tabac
       *ngIf="categorie.name == 'cigarette'"
       [check]= categorie.unable
+      description= '{{categorie.description}}'
+      avatar= '{{categorie.image}}'
       [objectif]= categorie.objectiveValue
     ></app-tabac>
   </div>
